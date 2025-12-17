@@ -8,6 +8,6 @@
     <p>Are you sure you want to delete the manufacturer: <strong>{{ manufacturer.name }}</strong>?</p>
 
     <input type="submit" value="Yes, delete." class="btn btn-danger">
-    <a href="{% url 'taxi:manufacturer-list' %}" class="btn btn-secondary">Cancel</a>
+    <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">Cancel</a>
   </form>
 {% endblock %}
